@@ -4,8 +4,8 @@
 echo "!!! overwriting docker push ${IMAGE_NAME}"
 
 push() {
-  echo "$ docker push $1"
-  docker push $1
+  echo "$ docker push ${DOCKER_REPO}:$1"
+  docker push ${DOCKER_REPO}:$1
 }
 
 push ${DOCKER_TAG}
