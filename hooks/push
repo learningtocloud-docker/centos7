@@ -11,5 +11,5 @@ push() {
 push ${DOCKER_TAG}
 push latest
 
-push ${DOCKER_TAG}-fr_FR
-push fr_FR
+push ${DOCKER_TAG}-fr
+push fr

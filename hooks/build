@@ -11,5 +11,5 @@ build() {
 build en_US ${DOCKER_TAG}
 build en_US latest
 
-build fr_FR ${DOCKER_TAG}-fr_FR
-build fr_FR fr_FR
+build fr_FR ${DOCKER_TAG}-fr
+build fr_FR fr
