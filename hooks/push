@@ -9,8 +9,7 @@ push() {
   eval "${COMMAND}"
 }
 
-push "${DOCKER_TAG}"
-push latest
-
 push "${DOCKER_TAG}-fr"
+push "${DOCKER_TAG}"
 push fr
+push latest
