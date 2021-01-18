@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # original docker build command
-echo "overwriting docker build -f ${DOCKERFILE_PATH} -t ${IMAGE_NAME} ."
+echo "!!! overwriting docker build -f ${DOCKERFILE_PATH} -t ${IMAGE_NAME} ."
 
 build() {
-  echo "docker build -f Dockerfile --build-arg LANGUAGE=$1 -t ${DOCKER_REPO}:$2 ../"
+  echo "$ docker build -f Dockerfile --build-arg LANGUAGE=$1 -t ${DOCKER_REPO}:$2 ../"
   docker build -f Dockerfile --build-arg LANGUAGE=$1 -t ${DOCKER_REPO}:$2 ../
 }
 

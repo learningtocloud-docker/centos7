@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # original docker push command
-echo "overwriting docker push ${IMAGE_NAME}"
+echo "!!! overwriting docker push ${IMAGE_NAME}"
 
 push() {
-  echo "docker push $1"
+  echo "$ docker push $1"
   docker push $1
 }
 
