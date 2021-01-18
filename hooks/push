@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# original docker push command
+echo "overwriting docker push ${IMAGE_NAME}"
+
+push() {
+  echo "docker push ${IMAGE_TAG}"
+  docker push ${IMAGE_TAG}
+}
+
+push ${DOCKER_TAG}
+push latest
+
+push ${DOCKER_TAG}-fr_FR
+push fr_FR
