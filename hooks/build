@@ -4,12 +4,13 @@
 echo "!!! overwriting docker build -f ${DOCKERFILE_PATH} -t ${IMAGE_NAME} ."
 
 build() {
-  echo "$ docker build -f Dockerfile --build-arg LANGUAGE=$1 -t ${DOCKER_REPO}:$2 ../"
-  docker build -f Dockerfile --build-arg LANGUAGE=$1 -t ${DOCKER_REPO}:$2 ../
+  COMMAND="docker build -f Dockerfile --build-arg LANGUAGE=$1 -t ${DOCKER_REPO}:$2 ../"
+  echo "$ ${COMMAND}"
+  eval "${COMMAND}"
 }
 
-build en_US ${DOCKER_TAG}
+build en_US "${DOCKER_TAG}"
 build en_US latest
 
-build fr_FR ${DOCKER_TAG}-fr
+build fr_FR "${DOCKER_TAG}-fr"
 build fr_FR fr
